@@ -45,6 +45,9 @@ const App = () => {
           <li>
             <Link to="/viewmembers">Viewmembers</Link>
           </li>   
+          <li>
+            <Link to="/recap">Recap</Link>
+          </li>
         </ul>
       </nav>
 
@@ -53,6 +56,7 @@ const App = () => {
         <Route path="/chorelist" element={<Chorelist />} />
         <Route path="/editlist" element={<Editlist />} />
         <Route path="/viewmembers" element={<Viewmembers/>} />
+        <Route path="/recap" element={<Recap/>} />
       </Routes>
 
      </div>
