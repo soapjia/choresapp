@@ -154,3 +154,7 @@
   top: 15px;
   width: 193px;
 }
+
+.join-a-house-group .overlap-group:hover {
+  opacity: 0.7;
+}

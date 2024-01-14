@@ -10,7 +10,6 @@ import Viewmembers from './viewmembers.js';
 const Home = () => (
     
   <div className="App">
-   return (
     <div className="join-a-house-group">
       <div className="div">
         <div className="text-wrapper">Join a housing group:</div>
@@ -23,11 +22,12 @@ const Home = () => (
           <span className="text-wrapper-3">here</span>
         </p>
         <div className="overlap-group">
-          <div className="text-wrapper-4">Join Group</div>
+          <Link to="/chorelist" className="text-wrapper-4">
+            Join Group
+          </Link>
         </div>
       </div>
     </div>
-  );
     </div>
 );
 
@@ -35,26 +35,6 @@ const Home = () => (
 const App = () => {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-           <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/chorelist">Chorelist</Link>
-          </li>
-          <li>
-            <Link to="/editlist">Editlist</Link>
-          </li>      
-          <li>
-            <Link to="/viewmembers">Viewmembers</Link>
-          </li>   
-          <li>
-            <Link to="/recap">Recap</Link>
-          </li>
-        </ul>
-      </nav>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chorelist" element={<Chorelist />} />

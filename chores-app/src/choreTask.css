@@ -1,5 +1,5 @@
 .rectangle {
-  height: 100px;
+  height: 50px;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 80%;
-  position: absolute; /* Set to absolute position */
+  position: relative; /* Set to absolute position */
 }
 
 .status {
@@ -20,6 +20,7 @@
 
 .status button {
   margin-left: 5px;
+  margin-right: 5px;
 }
 
 .rectangle h3 {
@@ -34,8 +35,12 @@
 
 .red-button {
   background-color: red;
+  width: 10px;
+  height: 15px;
 }
 
 .green-button {
   background-color: green;
+  width: 10px;
+  height: 15px;
 }

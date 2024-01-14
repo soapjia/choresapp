@@ -12,8 +12,8 @@ const Sidebar = () => {
       <Link to="/" className={`link ${location.pathname === '/chorelist' ? 'active' : ''}`}>
         Home
       </Link>
-      <Link to="/viewmembers" className={`link ${location.pathname === '/viewmembers' ? 'active' : ''}`}>
-        View Members
+      <Link to="/editlist" className={`link ${location.pathname === '/editlist' ? 'active' : ''}`}>
+        Edit Chores
       </Link>
     </div>
   );

@@ -1,15 +1,3 @@
-.logo {
-  height: 31px;
-  position: absolute;
-  width: 196px;
-}
-
-.header {
-  z-index: 2; /* Ensure the header is on top */
-  position: relative; /* Ensure z-index works by setting position to relative */
-}
-
-
 .home-page {
     background-color: #F0F0FE;
     display: flex;
@@ -17,13 +5,12 @@
     flex: 1;
     justify-content: center;
   }
-
  
   .home-page .div {
     background-color: #F0F0FE;
     position: relative;
     flex: 1;
-    height: 100vh;
+    height: 180vh;
   }
   
   .home-page .profileicon {
@@ -200,4 +187,3 @@
     top: 8px;
     width: 183px;
   }
-  
