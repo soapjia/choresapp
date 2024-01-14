@@ -1,13 +1,13 @@
 // Home.js
 import React from 'react';
 
-const Chorelist = () => {
+const Recap = () => {
   return (
     <div>
-      <h2> Chorelist Page </h2>
+      <h2> Recap Page </h2>
       {/* Add your page content here */}
     </div>
   );
 };
 
-export default Chorelist;
+export default Recap;
