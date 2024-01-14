@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <Link to="/" className={`link ${location.pathname === '/chorelist' ? 'active' : ''}`}>
+      <Link to="/chorelist" className={`link ${location.pathname === '/chorelist' ? 'active' : ''}`}>
         Home
       </Link>
       <Link to="/editlist" className={`link ${location.pathname === '/editlist' ? 'active' : ''}`}>
