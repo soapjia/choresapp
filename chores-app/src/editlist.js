@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './editlist.css';
+import Sidebar from './sidebar';
 
 
 const Editlist = () => {
@@ -132,38 +133,38 @@ const Editlist = () => {
   
   return (
     <div className="editlist-container">
-      <h2 className="editlist-header">Editlist Page</h2>
+      <Sidebar />
+      <div className="right-container"> 
+        <div className="editlist-header">Edit Chores</div>
+        <div className="list-container">
+          <div className="list">
+            <h3>Roommates:</h3>
+            {
+              roommates.roommates
+              ? <ul>
+                {roommates.roommates.map((roommate) => (
+                  <li>{roommate.personName}</li>
+                ))}
+              </ul>
+              : <p>Add more roomates</p>
+            }
+            
+          </div>
 
-      <div className="list-container">
-        <div className="list">
-          <h3>Roommates:</h3>
-          {
-            roommates.roommates
-            ? <ul>
-              {roommates.roommates.map((roommate) => (
-                <li>{roommate.personName}</li>
-              ))}
-            </ul>
-            : <p>Add more roomates</p>
-          }
-          
-        </div>
-
-        <div className="list">
-          <h3>Chores:</h3>
-          {
-            chores.chores
-            ? 
-            <ul>
-              {chores.chores.map((chore) => (
-                <li>{chore.choreName}</li>
-              ))}
-            </ul>
-            : <p>Add more chores</p>
-          }
-        </div>
+          <div className="list">
+            <h3>Chores:</h3>
+            {
+              chores.chores
+              ? 
+              <ul>
+                {chores.chores.map((chore) => (
+                  <li>{chore.choreName}</li>
+                ))}
+              </ul>
+              : <p>Add more chores</p>
+            }
+          </div>
       </div>
-
       <div className="add-chore-container">
         <input
           type="text"
@@ -175,6 +176,9 @@ const Editlist = () => {
           Add Chore
         </button>
       </div>
+      </div>
+
+
     </div>
   );
 };

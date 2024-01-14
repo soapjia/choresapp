@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import "./recap.css";
 import Sidebar from './sidebar';
 import logo from './applogo.png';
+import sophia from './sophiama.jpg';
+import bonnie from './bonnieqiucow.jpg';
+import sherry from './sherryshu.jpg';
+import grace from './gracezhou.jpg';
+
 const Recap = () => {
 
   //const [chores, setChores] = useState([]);
@@ -60,11 +65,25 @@ const Recap = () => {
         <p className="verifier">The verifier of the house:</p>
         <div className="bonnie">
           <div className="text-wrapper-11">Bonnie Qiu</div>
-          <div className="ellipse" />
+          <div className="ellipse">
+          <img
+            src={bonnie} 
+            alt="Profile"
+            style={{ width: '127px', height: '127px', borderRadius: '50%'}}
+          />
+          </div>
+          
         </div>
         <div className="sophia">
           <div className="text-wrapper-11">Sophia Ma</div>
-          <div className="ellipse" />
+          <div className="ellipse">
+          <img
+            src={sophia}  
+            alt="Profile"
+            style={{ width: '127px', height: '127px', borderRadius: '50%'}}
+
+          />
+          </div>
         </div>
         <div className="overlap-2">
           <div className="chores-assigned-text">Chores Assigned</div>
@@ -103,11 +122,23 @@ const Recap = () => {
         <div className="text-wrapper-30">The Forgetful Fourth</div>
         <div className="sherry">
           <div className="text-wrapper-11">Sherry Shu</div>
-          <div className="ellipse" />
+          <div className="ellipse">
+          <img
+            src={sherry} 
+            alt="Profile"
+            style={{ width: '127px', height: '127px', borderRadius: '50%'}}
+          />
+          </div>
         </div>
         <div className="grace">
           <div className="text-wrapper-11">Grace Zhou</div>
-          <div className="ellipse" />
+          <div className="ellipse">
+            <img
+            src={grace} 
+            alt="Profile"
+            style={{ width: '127px', height: '127px', borderRadius: '50%'}}
+          />
+          </div>
         </div>
         <div className="housemate-roles"> 🚮 Housemate Roles 👀</div>
         <div className="housemate-archetype">🧙🏻 Housemate Archetype 🔮</div>
@@ -119,7 +150,14 @@ const Recap = () => {
         <div className="chore-streak">🔥 Chores Streak 🔥</div>
         <div className="longest-streak">Longest streak: 5 weeks</div>
         <p className="view-previous-weekly">View previous weekly recaps &gt;</p>
-        <div className="profile-pic" />
+        <div className="profile-pic"  >
+        <img
+            src={sophia}  
+            alt="Profile"
+            style={{ width: '40px', height: '40px', borderRadius: '50%'}}
+
+          />
+        </div>
         <div className="profile">
           <div className="text-wrapper-39">Sophia</div>
           <div className="text-wrapper-40">My Account</div>

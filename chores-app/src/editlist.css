@@ -1,20 +1,35 @@
 /* Editlist.css */
 
-.editlist-container {
-    margin: 50px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+.editlist{
+  background-color: #F0F0FE;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
   }
-  
+
   .editlist-header {
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1000%;
-    text-align: center;
+    color: #0b0b0b;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    white-space: nowrap;
   }
   
+  .right-container {
+    background-color: #F0F0FE;
+    position: relative;
+    flex: 1;
+    height: 110vh;
+    padding-left:300px;
+  }
+  
+
   .list-container {
     display: flex;
     justify-content: space-between;
@@ -31,8 +46,8 @@
   
   .list h3 {
     color: #3498db;
-    font-family: 'Roboto', sans-serif;
-    font-size: 700%;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 30px;
   }
   
   ul {
@@ -41,8 +56,8 @@
   }
   
   li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 500%;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 30px;
     margin-bottom: 5px;
   }
   
@@ -57,7 +72,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
-    font-size: 500%;
+    font-size: 30px;
   }
   
   .add-chore-button {
@@ -67,8 +82,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 500%;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 30px;
   }
   
   .add-chore-button:hover {
