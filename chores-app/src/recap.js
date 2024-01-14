@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./recap.css";
-
+import Sidebar from './sidebar';
+import logo from './applogo.png';
 const Recap = () => {
 
   //const [chores, setChores] = useState([]);
@@ -43,41 +44,31 @@ const Recap = () => {
 
   return (
     <div className="chores-recap">
+      <img className="logo" alt="Logo" src={logo} />
+      <Sidebar />
       <div className="div">
-        <div className="group">
-          <div className="rectangle" />
-          <div className="rectangle-2" />
-        </div>
-        <div className="s-weekly-chores">&#39;s Weekly Chores Recap</div>
-        <img className="logo" alt="Logo" src="logo.png" />
-        <div className="overlap">
-          <div className="rectangle-3" />
-          <div className="text-wrapper">Chores Recap</div>
-          <div className="text-wrapper-2">NFT Collection</div>
-        </div>
-        <div className="text-wrapper-3">Home</div>
-        <div className="text-wrapper-4">View Chores</div>
-        <div className="text-wrapper-5">View Members</div>
-        <div className="text-wrapper-6">Log Out</div>
-        <p className="p">For the week: Mon, Jan 1 to Sun, Jan 7</p>
+        <div className="s-weekly-chores">Weekly Chores Recap</div>
+        <p className="week">For the week: Mon, Jan 1 to Sun, Jan 7</p>
         <p className="that-s-almost">
-          That’s almost perfect... too bad you didn&#39;t achieve it thanks to one housemate.
+          That’s almost perfect... too bad you didn't achieve it thanks to one housemate.
         </p>
-        <div className="text-wrapper-7">The fastest cleaner:</div>
-        <div className="text-wrapper-8">The last minute housemate:</div>
-        <p className="text-wrapper-9">The dirtiest of them all:</p>
-        <p className="text-wrapper-10">The verifier of the house:</p>
-        <div className="overlap-group">
+        
+
+        <div className="fastest-cleaner">The fastest cleaner:</div>
+        <div className="last-minute">The last minute housemate:</div>
+        <p className="dirtiest">The dirtiest of them all:</p>
+        <p className="verifier">The verifier of the house:</p>
+        <div className="bonnie">
           <div className="text-wrapper-11">Bonnie Qiu</div>
           <div className="ellipse" />
         </div>
-        <div className="overlap-group-2">
+        <div className="sophia">
           <div className="text-wrapper-11">Sophia Ma</div>
           <div className="ellipse" />
         </div>
         <div className="overlap-2">
-          <div className="text-wrapper-12">Chores Assigned</div>
-          <div className="text-wrapper-13">{choresAssigned}</div>
+          <div className="chores-assigned-text">Chores Assigned</div>
+          <div className="no-chores">{choresAssigned}</div>
         </div>
         <div className="rectangle-4" />
         <div className="rectangle-5" />
@@ -85,11 +76,11 @@ const Recap = () => {
         <div className="rectangle-7" />
         <div className="overlap-3">
           <div className="text-wrapper-14">Chores Complete</div>
-          <div className="text-wrapper-15">{choresCompleted}</div>
+          <div className="no-chores">{choresCompleted}</div>
         </div>
         <div className="overlap-4">
           <div className="text-wrapper-16">Chores Missed</div>
-          <div className="text-wrapper-13">{choresMissing}</div>
+          <div className="no-chores">{choresMissing}</div>
         </div>
         <div className="text-wrapper-17">Sophia Ma</div>
         <p className="text-wrapper-18">For the housemate that never misses trash day, always.</p>
@@ -107,33 +98,29 @@ const Recap = () => {
         <div className="text-wrapper-25">The Broom Buster</div>
         <div className="text-wrapper-26">Grace Zhou</div>
         <p className="for-the-housemate">
-          <span className="span">For the housemate that always forgets to do their chores, that even </span>
-          <span className="text-wrapper-27">housemate</span>
-          <span className="text-wrapper-28">&nbsp;</span>
-          <span className="text-wrapper-29">forgets they live here due to their inactivity.</span>
+          <span className="span">For the housemate that always forgets to do their chores, that even the housemate forgets they live here due to their inactivity </span>
         </p>
         <div className="text-wrapper-30">The Forgetful Fourth</div>
-        <div className="overlap-5">
+        <div className="sherry">
           <div className="text-wrapper-11">Sherry Shu</div>
           <div className="ellipse" />
         </div>
-        <div className="overlap-6">
+        <div className="grace">
           <div className="text-wrapper-11">Grace Zhou</div>
           <div className="ellipse" />
         </div>
-        <div className="text-wrapper-31">🧹Housemate Roles 🧹</div>
-        <div className="text-wrapper-32">🧹Housemate Archetype 🧹</div>
-        <div className="text-wrapper-33">🧹 Chore Summary 🧹</div>
-        <div className="text-wrapper-34">123 Western Rd</div>
-        <div className="overlap-7">
-          <div className="text-wrapper-35">0 weeks</div>
+        <div className="housemate-roles"> 🚮 Housemate Roles 👀</div>
+        <div className="housemate-archetype">🧙🏻 Housemate Archetype 🔮</div>
+        <div className="chore-summary">🧹 Chore Summary🧹</div>
+        <div className="summary">
+          <div className="week-streak">0 weeks</div>
           <p className="text-wrapper-36">for all weekly chores completed in a row</p>
         </div>
-        <div className="text-wrapper-37">🧹 Chores Streak 🧹</div>
-        <div className="text-wrapper-38">Longest streak: 5 weeks</div>
+        <div className="chore-streak">🔥 Chores Streak 🔥</div>
+        <div className="longest-streak">Longest streak: 5 weeks</div>
         <p className="view-previous-weekly">View previous weekly recaps &gt;</p>
-        <div className="ellipse-2" />
-        <div className="overlap-8">
+        <div className="profile-pic" />
+        <div className="profile">
           <div className="text-wrapper-39">Sophia</div>
           <div className="text-wrapper-40">My Account</div>
         </div>

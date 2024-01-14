@@ -1,4 +1,13 @@
+.logo {
+  height: 31px;
+  position: absolute;
+  width: 196px;
+}
 
+.header {
+  z-index: 2; /* Ensure the header is on top */
+  position: relative; /* Ensure z-index works by setting position to relative */
+}
 
 
 .home-page {
@@ -46,7 +55,9 @@
     font-style: italic;
     font-weight: 400;
     line-height: normal;
+    position: absolute;
     white-space: nowrap;
+    top: 104px;
   }
   
   .home-page .welcomeMessage {
@@ -62,17 +73,6 @@
   
   .home-page .span {
     font-weight: 600;
-  }
-  
-  .home-page .roommatesTasks {
-    color: #080d7e;
-    font-family: "Lato-SemiBold", Helvetica;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    top: 455px;
   }
   
   .home-page .profile {
@@ -186,14 +186,7 @@
     text-align: center;
     top: 457px;
   }
-  
-  .home-page .logo {
-    height: 31px;
-    left: 17px;
-    position: absolute;
-    top: 60px;
-    width: 196px;
-  }
+
   
   .home-page .text-wrapper-16 {
     color: #060960;

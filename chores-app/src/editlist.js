@@ -86,13 +86,37 @@ const Editlist = () => {
         const largestIdTemp = await largestIdResponse.json();
         const largestId = await largestIdTemp.largestId;
         console.log(largestId);
-        
+
+        const roommatesResponse = await fetch('http://localhost:3001/api/getRoommates');
+        const roommatesData = await roommatesResponse.json();
+        console.log(roommatesData);
+
+        const roommateNameList = [];
+        for (let i = 0; i < roommatesData.roommates.length; i++) {
+        const roommateTemp = roommatesData.roommates[i];
+        console.log(roommateTemp.personName);
+        let isAlready = "false";
+
+        for (let j = 0; j < roommateNameList.length; j++) {
+          if (roommateTemp.personName == roommateNameList[i]) {
+            isAlready = "true";
+          }
+        }
+
+        if (isAlready == "false") {
+          roommateNameList.push(roommateTemp.personName)
+        }
+        }
+
+        const randomIndex = Math.floor(Math.random() * roommateNameList.length);
+        var assignedPerson = roommateNameList[randomIndex];
+
         await fetch('http://localhost:3001/api/addChore', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ id:largestId, isDone:"0", isVerified:"0", choreName:newChore, personName:"" }), //dom't really need an id
+          body: JSON.stringify({ id:largestId, isDone:"0", isVerified:"0", choreName:newChore, personName:assignedPerson }), //dom't really need an id
         });
 
         console.log("complete");
@@ -105,7 +129,7 @@ const Editlist = () => {
       }
     }
   };
-
+  
   return (
     <div className="editlist-container">
       <h2 className="editlist-header">Editlist Page</h2>

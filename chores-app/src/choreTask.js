@@ -1,72 +1,116 @@
 import React, { useState, useEffect } from 'react';
-import './choreTask.css'
+import './choreTask.css';
 
 const ChoreTask = () => {
-    /*
-    const [roommates, setRoommates] = useState([]);
     const [chores, setChores] = useState([]);
 
     useEffect(() => {
         fetchData();
-      }, []);
+    }, []);
 
-      const fetchData = async () => {
+    const fetchData = async () => {
         try {
-          const roommatesResponse = await fetch('http://localhost:3001/api/getRoommates');
-          const roommatesData = await roommatesResponse.json();
-          console.log(roommatesData);
-          setRoommates(roommatesData);
-    
-          // roomateData => {roomates: [{name: 'name'}]}
-          console.log(JSON.parse(JSON.stringify(roommatesData)));
-
             const choresResponse = await fetch('http://localhost:3001/api/getChores');
             const choresData = await choresResponse.json();
             console.log(choresData);
             setChores(choresData);
-
         } catch (error) {
             console.error('Error fetching data:', error);
-          }
-        };
-    */
+        }
+    };
 
-    // Simulated data or fetch data from your database
-    const rectanglesData = [
-        { title: 'Rectangle 1', description: 'Description 1' },
-        { title: 'Rectangle 2', description: 'Description 2' },
-        // Add more data as needed
-    ];
+  function renderChores() {
+    try {
+      if (chores.chores.length > 0) {
+        return chores.chores.map((chore, index) => (
+          <DynamicRectangle key={index} data={chore} />
+        ));
+      } else {
+        return <p>No chores available. Add more chores.</p>;
+      }
+    } catch (error) {
+      // Handle the error as needed
+      console.error('Error rendering chores:', error);
+      return <p>An error occurred while rendering chores.</p>;
+    }
+  }
 
-    // returns a list of rectangle objects to be displayed
-    return (
-        <div>
-          <h1>Your App</h1>
-          <RectangleList rectangles={rectanglesData} />
-        </div>
-    );
-};
+  async function doneChore(data) {
+    console.log('Done clicked!');
+    console.log(data);
+    
+    try {
+      await fetch('http://localhost:3001/api/done-status', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-// create a list of the rectangles to be returned
-const RectangleList = ({ rectangles }) => {
-    return (
-        <div>
-          {rectangles.map((rectangle, index) => (
-            <DynamicRectangle key={index} data={rectangle} />
-          ))}
-        </div>
+      console.log("complete");
+
+    } catch (error) {
+      console.error('Error adding chore:', error);
+    }
+  } 
+
+  async function verifyChore(data) {
+    console.log('Verify clicked!');
+    console.log(data);
+    
+    try {
+      await fetch('http://localhost:3001/api/verified-status', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      console.log("complete");
+
+    } catch (error) {
+      console.error('Error adding chore:', error);
+    }
+  } 
+
+
+
+  const RectangleList = ({ chores }) => {
+      return (
+          <div>
+              {renderChores()}
+          </div>
       );
   };
 
-  // create rectangle
   const DynamicRectangle = ({ data }) => {
-    return (
-      <div className="rectangle">
-        <h3>{data.title}</h3>
-        <p>Assigned to:</p>
-        <p>{data.description}</p>
-      </div>
-    );
+      console.log(data);
+
+      const doneButtonColor = data.isDone === '1' ? 'green-button' : 'red-button';
+      const verifyButtonColor = data.isVerified === '1' ? 'green-button' : 'red-button';
+
+      return (
+          <div className="rectangle">
+              <h3>{data.choreName}</h3>
+              <p>Assigned to:</p>
+              <p>{data.personName}</p>
+              <div className="status">
+                <p>Done</p>
+                <button className={doneButtonColor} onClick={() => doneChore(data)}></button>
+                <p>Verify</p>
+                <button className={verifyButtonColor} onClick={() => verifyChore(data)}></button>
+              </div>
+          </div>
+      );
   };
-  
+
+  return (
+    <div>
+        <RectangleList chores={chores} />
+    </div>
+  );
+  };
+
 export default ChoreTask;

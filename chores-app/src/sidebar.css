@@ -11,6 +11,7 @@
     width: 250px;
     background-color: #F0F0FE; 
     padding: 20px;
+    z-index: 1;
   }
   
   .sidebar a {
