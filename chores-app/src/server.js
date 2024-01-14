@@ -21,12 +21,31 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/api/getRoommates', async (req, res) => {
-  const keys = await redisClient.keys('Housemate*');
 
+  const roommates = [];
+  let num = 1;
 
-  const roommate1 = await redisClient.hGetAll('Housemate1');
-  console.log("endpoint");
-  res.send(roommate1); 
+  try {
+    while (true) {
+      const roommateKey = 'Housemate' + num;
+      const exists = await redisClient.exists(roommateKey);
+      console.log(exists);
+
+      if (!exists) {
+        break; // Exit the loop if the key doesn't exist
+      }
+
+      const roommateData = await redisClient.hGetAll(roommateKey);
+      roommates.push(roommateData);
+      num++;
+    }
+
+    res.json({ roommates });
+
+    } catch (error) {
+      console.error('Error retrieving chores from Redis:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+      }
 })
 
 app.get('/api/getChores', async (req, res) => {
@@ -56,28 +75,75 @@ app.get('/api/getChores', async (req, res) => {
       }
   });
 
+
+  app.get('/api/getLargestId', async (req, res) => {
+    let largestId = 0;
+  
+    try {
+      const idKey = 'largestId';
+      const exists = await redisClient.exists(idKey);
+      console.log(exists);
+  
+      const largestIdResponse = await redisClient.hGetAll(idKey); 
+      console.log(largestIdResponse);
+      largestId = largestIdResponse.largestId;
+      console.log(largestId);
+      
+    } catch (error) {
+      console.error('Error retrieving largestId from Redis:', error);
+    }
+  
+    res.json( {largestId} );
+  });
+    
+
 app.post('/api/addChore', async (req, res) => {
   const { id, isDone, isVerified, choreName, personName } = req.body;
-  const result = await redisClient.hset("Chores", id, "1");
 
-  // try {
-  //   const result = await redisClient.hset("Chores", id, "1");
-  //   console.log("Chore added to Redis");
-  //   res.json({ message: 'Chore added successfully' });
-  // } catch (error) {
-  //   console.error('Error adding chore to Redis:', error);
-  //   res.status(500).json({ error: 'Internal Server Error' });
-  // }
+  try {
 
+    const parsedId = parseInt(id, 10); // Parse id as an integer
+    const incrementedId = parsedId + 1; // Increment the parsed id
+
+    const result = await redisClient.hSet("Chore" + id, {id:id, isDone:isDone, isVerified:isVerified, choreName:choreName, personName:personName})
+    const changeId = await redisClient.hSet("largestId", {largestId:incrementedId})
+    res.send("complete");
+  } catch (error) {
+    console.log(error);
+  }
 })
 
-//done 
+//might not need this 
+// app.get('/api/status', async (req, res) => {
+  
+// })
 
-//undone 
+app.post('/api/done-status', async (req, res) => {
+  const { id, isDone } = body.req;
+  
+  if (isDone == "0") {
+    const result = await redisClient.hset('chore:' + id, 'isDone', '1');
+    res.send("Done");
+  } else if (isDone == "1") {
+    const result = await redisClient.hset('chore' + id, 'isDone', '0');
+    res.send("undone");
+  }
 
-//verify
+  
+})
 
-// unverify
+app.post('/api/verified-status', async (req, res) => {
+  const { id, isVerified } = body.req;
+
+  if (isVerified == "0") {
+    const result = await redisClient.hset('chore:' + id, 'isVerified', '1');
+    res.send("Verified");
+  } else if (isVerified == "1") {
+    const result = await redisClient.hset('chore:' + id, 'isVerified', '0');
+    res.send("unverified");
+  }
+    
+})
 
 
 app.listen(port, () => {
