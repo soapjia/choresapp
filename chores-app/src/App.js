@@ -9,21 +9,25 @@ import Viewmembers from './viewmembers.js';
 // this will be the login page
 const Home = () => (
     
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+  <div className="App">
+   return (
+    <div className="join-a-house-group">
+      <div className="div">
+        <div className="text-wrapper">Join a housing group:</div>
+        <div className="overlap">
+          <div className="text-wrapper-2">Enter Code</div>
+        </div>
+        <p className="p">Enter your 8 digit housemate code</p>
+        <p className="don-t-have-a-code">
+          <span className="span">Don&#39;t have a code? Create one </span>
+          <span className="text-wrapper-3">here</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="overlap-group">
+          <div className="text-wrapper-4">Join Group</div>
+        </div>
+      </div>
+    </div>
+  );
     </div>
 );
 
