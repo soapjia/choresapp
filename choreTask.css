@@ -1,0 +1,41 @@
+.rectangle {
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  position: absolute; /* Set to absolute position */
+}
+
+.status {
+  display: flex;
+  align-items: center;
+}
+
+.status button {
+  margin-left: 5px;
+}
+
+.rectangle h3 {
+  color: #333;
+  margin-right: 10px;
+}
+
+.rectangle p {
+  color: #666;
+  margin-right: 10px;
+}
+
+.red-button {
+  background-color: red;
+}
+
+.green-button {
+  background-color: green;
+}

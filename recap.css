@@ -1,0 +1,763 @@
+.logo {
+  height: 31px;
+  left: 251px;
+  position: absolute;
+  width: 196px;
+}
+
+.chores-recap {
+    background-color: #f0f0fe;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .chores-recap .div {
+    background-color: #f0f0fe;
+    height: 1024px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .chores-recap .group {
+    height: 1024px;
+    left: 251px;
+    position: absolute;
+    top: 0;
+    width: 5px;
+  }
+  
+  .chores-recap .rectangle {
+    background-color: #eaeaea;
+    height: 1024px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 3px;
+  }
+  
+  .chores-recap .rectangle-2 {
+    background-color: #f7f7f7;
+    height: 1024px;
+    left: 3px;
+    position: absolute;
+    top: 0;
+    width: 3px;
+  }
+  
+  .chores-recap .s-weekly-chores {
+    color: #0b0b0b;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .overlap {
+    height: 58px;
+    left: 16px;
+    position: absolute;
+    top: 344px;
+    width: 191px;
+  }
+  
+  .chores-recap .rectangle-3 {
+    background-color: #06096017;
+    border-radius: 10px;
+    height: 34px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 188px;
+  }
+  
+  .chores-recap .text-wrapper {
+    color: #060960;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 8px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 2px;
+    width: 183px;
+  }
+  
+  .chores-recap .text-wrapper-2 {
+    color: #000000;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 8px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 33px;
+    width: 183px;
+  }
+  
+  .chores-recap .text-wrapper-3 {
+    color: #000000;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 208px;
+    width: 183px;
+  }
+  
+  .chores-recap .text-wrapper-4 {
+    color: #000000;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 278px;
+    width: 183px;
+  }
+  
+  .chores-recap .text-wrapper-5 {
+    color: #0c0c0c;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 310px;
+    width: 183px;
+  }
+  
+  .chores-recap .week {
+    color: #797878;
+    font-family: "Lato-Italic", Helvetica;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 104px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .that-s-almost {
+    color: #797878;
+    font-family: "Lato-Italic", Helvetica;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 17px;
+    position: absolute;
+    text-align: center;
+    top: 413px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .fastest-cleaner {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 550px;
+    letter-spacing: 0;
+    line-height: 24.2px;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+    width: 177px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .last-minute {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 760px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 250px;
+    width: 264px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .dirtiest {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 540px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 517px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .verifier {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 770px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 517px;
+    width: 247px;
+    white-space: wrap;
+  }
+  
+  .chores-recap .bonnie {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 191px;
+    left: 550px;
+    position: absolute;
+    top: 292px;
+    width: 191px;
+  }
+  
+  .chores-recap .text-wrapper-11 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    left: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 150px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .ellipse {
+    background-color: #d9d9d9;
+    border-radius: 63.5px/61px;
+    height: 122px;
+    left: 32px;
+    position: absolute;
+    top: 18px;
+    width: 127px;
+  }
+  
+  .chores-recap .sophia {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 191px;
+    left: 800px;
+    position: absolute;
+    top: 292px;
+    width: 191px;
+  }
+  
+  .chores-recap .overlap-2 {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 156px;
+    left: 0px;
+    position: absolute;
+    top: 245px;
+    width: 152px;
+  }
+  
+  .chores-recap .chores-assigned-text {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 121px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .no-chores {
+    color: #0d14bb;
+    font-family: "Lato-Black", Helvetica;
+    font-size: 64px;
+    font-weight: 900;
+    left: 57px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 32px;
+  }
+  
+  .chores-recap .rectangle-4 {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 95px;
+    left: 0px;
+    position: absolute;
+    top: 540px;
+    width: 95px;
+  }
+  
+  .chores-recap .rectangle-5 {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 95px;
+    left: 0px;
+    position: absolute;
+    top: 645px;
+    width: 95px;
+  }
+  
+  .chores-recap .rectangle-6 {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 95px;
+    left: 0px;
+    position: absolute;
+    top: 750px;
+    width: 95px;
+  }
+  
+  .chores-recap .rectangle-7 {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 95px;
+    left: 0px;
+    position: absolute;
+    top: 857px;
+    width: 95px;
+  }
+  
+  .chores-recap .overlap-3 {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 156px;
+    left: 175px;
+    position: absolute;
+    top: 245px;
+    width: 152px;
+  }
+  
+  .chores-recap .text-wrapper-14 {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 121px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .text-wrapper-15 {
+    color: #0d14bb;
+    font-family: "Lato-Black", Helvetica;
+    font-size: 64px;
+    font-weight: 900;
+    left: 58px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 32px;
+  }
+  
+  .chores-recap .overlap-4 {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 156px;
+    left: 350px;
+    position: absolute;
+    top: 245px;
+    width: 152px;
+  }
+  
+  .chores-recap .text-wrapper-16 {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 27px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 121px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .text-wrapper-17 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 568px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .text-wrapper-18 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 13px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 595px;
+    width: 357px;
+  }
+  
+  .chores-recap .text-wrapper-19 {
+    color: #080d7f;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 543px;
+    width: 345px;
+  }
+  
+  .chores-recap .text-wrapper-20 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 675px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .text-wrapper-21 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 13px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 702px;
+    width: 365px;
+  }
+  
+  .chores-recap .text-wrapper-22 {
+    color: #080d7f;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 650px;
+    width: 345px;
+  }
+  
+  .chores-recap .text-wrapper-23 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 780px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .text-wrapper-24 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 13px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 807px;
+    width: 365px;
+  }
+  
+  .chores-recap .text-wrapper-25 {
+    color: #080d7f;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 755px;
+    width: 345px;
+  }
+  
+  .chores-recap .text-wrapper-26 {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 885px;
+    white-space: nowrap;
+  }
+
+  .chores-recap .for-the-housemate {
+    color: #000000;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 13px;
+    font-weight: 600;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 900px;
+    width: 365px;
+  }
+  
+  .chores-recap .span {
+    font-weight: 600;
+  }
+  
+  .chores-recap .text-wrapper-30 {
+    color: #080d7f;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 860px;
+    width: 345px;
+  }
+  
+  .chores-recap .sherry {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 191px;
+    left: 550px;
+    position: absolute;
+    top: 580px;
+    width: 191px;
+  }
+  
+  .chores-recap .grace {
+    background-color: #fffcfc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 191px;
+    left: 800px;
+    position: absolute;
+    top: 580px;
+    width: 191px;
+  }
+  
+  .chores-recap .housemate-roles {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 650px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 201px;
+  }
+  
+  .chores-recap .housemate-archetype {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 70px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 477px;
+  }
+  
+  .chores-recap .chore-summary {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 0px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 201px;
+  }
+  
+  .chores-recap .summary {
+    background-color: #dfe0fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 125px;
+    left: 550px;
+    position: absolute;
+    top: 850px;
+    width: 440px;
+  }
+  
+  .chores-recap .week-streak {
+    color: #0d14bb;
+    font-family: "Lato-Black", Helvetica;
+    font-size: 48px;
+    font-weight: 900;
+    left: 110px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 9px;
+  }
+  
+  .chores-recap .text-wrapper-36 {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 70px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 67px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .chore-streak {
+    color: #080d7e;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 650px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 800px;
+  }
+  
+  .chores-recap .longest-streak {
+    color: #080d7e;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 13px;
+    font-weight: 600;
+    left: 690px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 990px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .view-previous-weekly {
+    color: #000000;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    text-decoration: underline;
+    top: 153px;
+    white-space: nowrap;
+  }
+  
+  .chores-recap .profile-pic {
+    background-color: #d9d9d9;
+    border-radius: 20.5px;
+    height: 41px;
+    left: 750px;
+    position: absolute;
+    top: 55px;
+    width: 41px;
+  }
+  
+  .chores-recap .profile {
+    height: 28px;
+    left: 800px;
+    position: absolute;
+    top: 61px;
+    width: 110px;
+  }
+  
+  .chores-recap .text-wrapper-39 {
+    color: #000000;
+    font-family: "Lato-Bold", Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 110px;
+  }
+  
+  .chores-recap .text-wrapper-40 {
+    color: #7f7b7b;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 11px;
+    font-weight: 400;
+    left: 1px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 13px;
+    width: 69px;
+  }
+  

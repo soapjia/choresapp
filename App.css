@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.join-a-house-group {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.join-a-house-group .div {
+  background: linear-gradient(180deg, rgb(35.42, 38.96, 123.94) 0%, rgb(10.75, 13.9, 89.47) 100%);
+  background-color: rgba(255, 255, 255, 1);
+  height: 1024px;
+  position: relative;
+  width: 1440px;
+}
+
+.join-a-house-group .text-wrapper {
+  color: #ffffff;
+  font-family: "Lato-Bold", Helvetica;
+  font-size: 36px;
+  font-weight: 700;
+  left: 551px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 309px;
+  white-space: nowrap;
+}
+
+.join-a-house-group .overlap {
+  background-color: #d9d9d940;
+  border: 2px solid;
+  border-color: #f6f2f2;
+  border-radius: 10px;
+  height: 61px;
+  left: 486px;
+  position: absolute;
+  top: 431px;
+  width: 469px;
+}
+
+.join-a-house-group .text-wrapper-2 {
+  color: #e2e2e2;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 24px;
+  font-weight: 300;
+  left: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 12px;
+}
+
+.join-a-house-group .p {
+  color: #ffffff;
+  font-family: "Lato-Italic", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  left: 434px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 362px;
+  width: 571px;
+}
+
+.join-a-house-group .don-t-have-a-code {
+  color: #ffffff;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 435px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 670px;
+  width: 571px;
+}
+
+.join-a-house-group .span {
+  font-family: "Lato-Italic", Helvetica;
+  font-style: italic;
+}
+
+.join-a-house-group .text-wrapper-3 {
+  font-family: "Lato-Italic", Helvetica;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.join-a-house-group .overlap-group {
+  background-color: #02032e;
+  border-radius: 10px;
+  height: 61px;
+  left: 486px;
+  position: absolute;
+  top: 517px;
+  width: 469px;
+}
+
+.join-a-house-group .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Lato-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  left: 138px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  width: 193px;
+}
