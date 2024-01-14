@@ -119,13 +119,15 @@ app.post('/api/addChore', async (req, res) => {
 // })
 
 app.post('/api/done-status', async (req, res) => {
-  const { id, isDone } = body.req;
+  const { id, isDone, isVerified, personName, choreName } = req.body;
+  console.log(id);
+  console.log(isDone);
   
   if (isDone == "0") {
-    const result = await redisClient.hset('chore:' + id, 'isDone', '1');
+    const result = await redisClient.hSet("Chore" + id, {id:id, isDone:'1', isVerified:isVerified, choreName:choreName, personName:personName});
     res.send("Done");
   } else if (isDone == "1") {
-    const result = await redisClient.hset('chore' + id, 'isDone', '0');
+    const result = await redisClient.hSet("Chore" + id, {id:id, isDone:'0', isVerified:isVerified, choreName:choreName, personName:personName});
     res.send("undone");
   }
 
@@ -133,13 +135,13 @@ app.post('/api/done-status', async (req, res) => {
 })
 
 app.post('/api/verified-status', async (req, res) => {
-  const { id, isVerified } = body.req;
+  const { id, isDone, isVerified, personName, choreName } = req.body;
 
   if (isVerified == "0") {
-    const result = await redisClient.hset('chore:' + id, 'isVerified', '1');
+    const result = await redisClient.hSet("Chore" + id, {id:id, isDone:isDone, isVerified:'1', choreName:choreName, personName:personName});
     res.send("Verified");
   } else if (isVerified == "1") {
-    const result = await redisClient.hset('chore:' + id, 'isVerified', '0');
+    const result = await redisClient.hSet("Chore" + id, {id:id, isDone:isDone, isVerified:'0', choreName:choreName, personName:personName});
     res.send("unverified");
   }
     
